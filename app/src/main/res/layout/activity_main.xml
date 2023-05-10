@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.MainActivity">
+
+    <ScrollView
+        android:id="@+id/svDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="92dp">
+
+        <LinearLayout
+            android:id="@+id/LLTitle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:id="@+id/imgDashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dashboard"
+                    android:paddingStart="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/notification"
+                    android:paddingStart="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgKeranjang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/keranjang"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgNotification"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="10dp"
+                android:elevation="2dp"
+                android:background="@drawable/image_dashboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LLTitle">
+
+                <ImageView
+                    android:id="@+id/imgDashboardScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/image_dashboard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSolusi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/solusi_kesehatan_anda"
+                    android:textColor="@color/color_blue"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/imgDashboardScreen"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSolusiDesc"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/uodate_informasi_kesehatan"
+                    android:textColor="@color/color_blue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/imgDashboardScreen"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSolusi" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/selengkapnya"
+                    style="@style/allProduct"
+                    app:layout_constraintStart_toStartOf="@+id/imgDashboardScreen"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSolusiDesc" />
+
+                <ImageView
+                    android:id="@+id/igDashboardSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_button_set"
+                    app:layout_constraintEnd_toEndOf="@+id/imgDashboardScreen"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutLayananKhusus"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="30dp"
+            android:elevation="10dp"
+            android:background="@drawable/bg_account_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <TextView
+                android:id="@+id/tvLayananKhusus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/layanan_khusus"
+                android:textColor="@color/colorName"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCovid19"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/test_covid_19"
+                android:textColor="@color/colorName"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLayananKhusus" />
+
+
+            <TextView
+                android:id="@+id/tvDaftarTes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/daftar_test"
+                android:textColor="@color/colorName"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCovid19" />
+
+            <ImageView
+                android:id="@+id/imgArrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvDaftarTes"
+                app:layout_constraintTop_toBottomOf="@+id/tvCovid19"
+                app:srcCompat="@drawable/arrow_right_blue" />
+
+            <ImageView
+                android:id="@+id/imgLayananKhusus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layanan_khusus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutTrackPemeriksaan"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="30dp"
+            android:elevation="10dp"
+            android:background="@drawable/bg_account_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutLayananKhusus">
+
+            <ImageView
+                android:id="@+id/imgTrackpemeriksaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/track_pemeriksaan"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTrackPemeriksaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="44dp"
+                android:text="@string/track_pemeriksaan"
+                android:textColor="@color/colorName"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imgTrackpemeriksaan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDapatMengecek"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/kamu_dapat_mengecek"
+                android:textColor="@color/colorName"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgTrackpemeriksaan"
+                app:layout_constraintTop_toBottomOf="@+id/tvTrackPemeriksaan" />
+
+            <TextView
+                android:id="@+id/tvTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/track"
+                android:textColor="@color/colorName"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imgTrackpemeriksaan"
+                app:layout_constraintTop_toBottomOf="@+id/tvDapatMengecek" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTrack"
+                app:layout_constraintTop_toBottomOf="@+id/tvDapatMengecek"
+                app:srcCompat="@drawable/arrow_right_blue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutFilter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_bullat"
+            android:elevation="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTrackPemeriksaan">
+
+            <ImageView
+                android:id="@+id/imgFilter"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/dashboard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSearch"
+            android:layout_width="265dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_search"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutFilter"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTrackPemeriksaan">
+
+            <EditText
+                android:id="@+id/tvSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_search"
+                android:drawableEnd="@drawable/ic_search_blue"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="20dp"
+                android:singleLine="true"
+                android:text="@string/search"
+                android:textColor="@color/color_coklat"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollVieww"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="16dp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutSearch">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/allProductButton"
+                        style="@style/allProduct"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bg_search"
+                        android:minHeight="35dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/all_product"
+                        android:textColor="@color/white" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/layananKesehatanButton"
+                        style="@style/layananKesehatan"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bg_search"
+                        android:minHeight="35dp"
+                        android:elevation="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/layanan_kesehatan"
+                        android:theme="@style/Button.White"
+                        android:textColor="@color/white" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/alatKesehatanButton"
+                        style="@style/alatKesehatan"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/bg_search"
+                        android:minHeight="35dp"
+                        android:elevation="5dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/alat_kesehatan"
+                        android:theme="@style/Button.White"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemRecylerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollVieww"
+                tools:layout_editor_absoluteX="-97dp"
+                tools:listitem="@layout/item_kesehatan" />
+
+            <TextView
+                android:id="@+id/tvTipeLayanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/tipe_layanan_kesehatan"
+                android:textColor="@color/colorName"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemRecylerview" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutTipeLayanan"
+                android:layout_width="265dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_search"
+                android:elevation="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTipeLayanan">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_account_secondary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvSatuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/satuan"
+                        android:textColor="@color/colorName"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvPaketPemeriksaan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_pemeriksaan"
+                    android:textColor="@color/colorName"
+                    android:layout_marginEnd="16sp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemRecylerviewPaketPemeriksaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTipeLayanan"
+                tools:listitem="@layout/item_tipe_layanan_kesehatan"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemRecylerviewPaketPemeriksaan">
+
+
+                <TextView
+                    android:id="@+id/tvTampilkanLebihBanyak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/onprogress"
+                    android:text="@string/tampilkan_lebih_banyak"
+                    android:textColor="@color/color_coklat_high"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_footer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                <TextView
+                    android:id="@+id/tvUpdateProfile"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:text="@string/update_aplikasi"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDapatkanNotifikasi"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dapatkan_notifikasi"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgBackRight"
+                    app:layout_constraintStart_toEndOf="@+id/tvUpdateProfile"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgBackRight"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/arrow_right_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

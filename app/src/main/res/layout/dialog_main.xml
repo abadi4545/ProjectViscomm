@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayoutClose"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="1dp">
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/close" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imgNameProfile"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/bg_bullat_abu"
+            app:layout_constraintStart_toEndOf="@+id/constrainLayoutClose"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="115dp"
+            android:text="@string/name_profile"
+            android:textColor="@color/color_blue"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/imgNameProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProfileMembership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:text="@string/jabatan"
+            android:textColor="@color/color_blue"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imgNameProfile"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameProfile" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutProfileSaya"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="41dp"
+            app:layout_constraintStart_toEndOf="@+id/constrainLayoutClose"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfileMembership">
+
+            <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_saya"
+                android:textColor="@color/color_coklat_tua"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgSyarat"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/ic_arrow_right_now"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayoutPengaturan"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/constrainLayoutClose"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutProfileSaya">
+
+            <TextView
+                android:id="@+id/tvPengaturan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pengaturan"
+                android:textColor="@color/color_coklat_tua"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgSyaratSecond"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/ic_arrow_right_now"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutTipeLayanan"
+            android:layout_width="131dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginStart="40dp"
+            android:elevation="10dp"
+            android:background="@drawable/bg_account_red"
+            app:layout_constraintStart_toEndOf="@+id/constrainLayoutClose"
+            app:layout_constraintTop_toBottomOf="@+id/constrainLayoutPengaturan">
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Logout"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvIkutiKami"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="89dp"
+            android:layout_marginStart="83dp"
+            android:text="@string/ikuti_kami"
+            android:textColor="@color/color_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/constrainLayoutClose"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTipeLayanan" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/tvIkutiKami"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTipeLayanan">
+
+            <ImageView
+                android:id="@+id/imgFacebook"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/ic_facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgInstagram"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/ic_instagram"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgTwitter"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/ic_twitter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imgInstagram"
+                app:layout_constraintStart_toEndOf="@+id/imgFacebook"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayoutFooter"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constrainLayoutClose"
+            app:layout_constraintTop_toBottomOf="@+id/tvIkutiKami">
+
+            <TextView
+                android:id="@+id/tvFaq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/faq"
+                android:textColor="@color/color_coklat_tua"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTermConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/term_and_Conditions"
+                android:textColor="@color/color_coklat_tua"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

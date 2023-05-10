@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="110dp"
+                android:text="@string/hai_selamat"
+                android:textColor="@color/colorName"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNameDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/hai_selamat_description"
+                android:textColor="@color/colorNameDescription"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameDescription" />
+
+            <TextView
+                android:id="@+id/tvNamaDepan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/nama_depan"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <LinearLayout
+                android:id="@+id/llNamaDepan"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:textIsSelectable="true"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNamaDepan">
+
+                <EditText
+                    android:id="@+id/tvEditNamaDepan"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNamaBelakang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="51dp"
+                android:text="@string/nama_Belakang"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <LinearLayout
+                android:id="@+id/llNamaBelakang"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNamaDepan">
+
+                <EditText
+                    android:id="@+id/tvEditNamaBelakang"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNoKtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/no_ktp"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llNamaDepan" />
+
+            <LinearLayout
+                android:id="@+id/llEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvNoKtp">
+
+                <EditText
+                    android:id="@+id/tvEditNoKtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:hint="@string/masukkan_no_ktp_anda"
+                    android:textColor="@color/colorGrayDark"
+                    android:textColorLink="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/email"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llEmail" />
+
+
+            <LinearLayout
+                android:id="@+id/llEmailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail">
+
+                <EditText
+                    android:id="@+id/tvEmailRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:hint="@string/masukkan_email_anda"
+                    android:textColor="@color/colorGrayDark"
+                    android:textColorHint="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNoTelpon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/no_telpon"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llEmailRegister" />
+
+
+            <LinearLayout
+                android:id="@+id/llNoTelpon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvNoTelpon">
+
+                <EditText
+                    android:id="@+id/tvEditNoTelpon"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:hint="@string/masukkan_no_telepon"
+                    android:textColor="@color/colorGrayDark"
+                    android:textColorHint="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:text="@string/password"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llNoTelpon" />
+
+            <LinearLayout
+                android:id="@+id/llPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvPassword">
+
+                <EditText
+                    android:id="@+id/tvEditPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:hint="@string/masukkan_password_anda"
+                    android:inputType="textPassword"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGrayDark"
+                    android:textColorHint="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvKonfrimasiPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:hint="@string/konfirmasi_password"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llPassword" />
+
+            <LinearLayout
+                android:id="@+id/llKonfirmasiPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_account_item"
+                android:elevation="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/tvKonfrimasiPassword">
+
+                <EditText
+                    android:id="@+id/tvEditKonifrimasiPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_account_item"
+                    android:hint="@string/konfirmasi_password_anda"
+                    android:inputType="textPassword"
+                    android:paddingStart="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGrayDark"
+                    android:textColorHint="@color/color_coklat"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_login"
+                android:drawableEnd="@drawable/arrow_right_white"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llKonfirmasiPassword"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:id="@+id/tvSudahPunyaAkun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="10dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/btnRegister">
+
+                <TextView
+                    android:id="@+id/tvEditSudahPunyaAkun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/sudah_punya_akun"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSudahPunyaAkun">
+
+                <ImageView
+                    android:id="@+id/imgReserved"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/ic_reserved"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTampilkanLebihBanyak"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTampilkanLebihBanyak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserved"
+                    android:textColor="@color/color_coklat_tua"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
