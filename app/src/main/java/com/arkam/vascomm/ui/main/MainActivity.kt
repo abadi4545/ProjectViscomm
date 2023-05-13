@@ -1,18 +1,17 @@
-package com.arkam.vascomm.ui
+package com.arkam.vascomm.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.arkam.vascomm.DialogDashboardListener
 import com.arkam.vascomm.R
-import com.arkam.vascomm.adapter.MainAdapter
-import com.arkam.vascomm.adapter.MainSecondAdapter
+import com.arkam.vascomm.data.adapter.MainAdapter
+import com.arkam.vascomm.data.adapter.MainSecondAdapter
 import com.arkam.vascomm.databinding.ActivityMainBinding
 import com.arkam.vascomm.model.Kesehatan
 import com.arkam.vascomm.model.Pemeriksaan
-import com.arkam.vascomm.showDialogDashboard
+import com.arkam.vascomm.util.DialogDashboardListener
+import com.arkam.vascomm.util.showDialogDashboard
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             showDialogDashboard(object : DialogDashboardListener{
                 override fun onCloseDialog() {
                 }
+
             })
         }
     }
