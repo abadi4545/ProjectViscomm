@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/color_profile"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <ScrollView
         android:id="@+id/svDashboard"

@@ -1,4 +1,4 @@
-package com.arkam.vascomm.adapter
+package com.arkam.vascomm.data.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

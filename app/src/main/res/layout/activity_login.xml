@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvEmail">
 
                 <EditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/tvEditEmail"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/bg_account_item"

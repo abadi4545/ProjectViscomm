@@ -21,5 +21,7 @@
     <color name="color_data_profile">#333333</color>
     <color name="color_data_profile_desc">#BDBDBD</color>
     <color name="colorGrayDark">#191919</color>
+    <color name="lavender">#8692f7</color>
+
 
 </resources>

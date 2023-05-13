@@ -1,4 +1,4 @@
-package com.arkam.vascomm
+package com.arkam.vascomm.util
 
 import android.app.Activity
 import android.app.Dialog
@@ -6,8 +6,9 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Window
+import com.arkam.vascomm.R
 import com.arkam.vascomm.databinding.DialogMainBinding
-import com.arkam.vascomm.ui.ProfileActivity
+import com.arkam.vascomm.ui.profile.ProfileActivity
 
 interface DialogDashboardListener{
     fun onCloseDialog()
